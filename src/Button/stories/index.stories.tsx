@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Button,{ ButtonProps } from '../index';
 import {MagnifyingGlass,CaretRight,CaretLeft,Plus} from "phosphor-react";
+import Button,{ ButtonProps } from '../index';
 
 export default {
   title: 'Button',
