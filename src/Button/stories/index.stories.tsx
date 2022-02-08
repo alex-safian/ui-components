@@ -15,5 +15,5 @@ export const Primary = Template.bind({});
 
 Primary.args = {
 	label: 'Button',
-	children: 'button'
+	children: 'button 1'
 };

@@ -31,7 +31,8 @@
     "build": "rollup -c",
     "clean": "git clean -Xdf",
     "storybook": "start-storybook -p 6006",
-    "create-component": "./tools/create-component.js"
+    "create-component": "./tools/create-component.js",
+    "chromatic": "npx chromatic --project-token=7091e3c7ae4f"
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
