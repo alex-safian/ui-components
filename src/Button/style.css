@@ -1,0 +1,39 @@
+
+.ant-btn{
+    @apply rounded-lg bg-white text-primary text-base font-bold font-inter h-auto;
+    @apply inline-flex items-center justify-center rounded-lg border-2 border-transparent;
+    @apply hover:shadow-md hover:border-transparent hover:bg-opacity-50 hover:text-primary focus:text-primary focus:border-transparent focus:outline-none;
+
+    &- {
+        &lg{
+            @apply px-4 py-3 h-auto;
+        }
+    }
+
+    &-primary{
+        @apply bg-primary text-white;
+        @apply hover:bg-primary hover:text-white hover:text-opacity-70 focus:bg-primary focus:text-white ;
+    }
+
+    &-circle{
+         @apply h-auto px-0 py-1.5;
+         
+    }
+    
+}
+
+.icon{
+    @apply align-bottom;
+ }
+
+.left{
+     @apply pr-2;
+}
+
+.right{
+    @apply pl-2;
+}
+
+.circle{
+    @apply align-middle mb-1;
+}
