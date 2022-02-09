@@ -18,9 +18,22 @@ jobs:
     # Job steps
     steps:
       - uses: actions/checkout@v1
-      - name: Install dependencies
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+    
+      - name: Use cached node_modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+        
+      - if: steps.cache.outputs.cache-hit != 'true'
+        name: Install dependencies
         run: yarn
         # 👇 Adds Chromatic as a step in the workflow
+        
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
