@@ -85,7 +85,7 @@
     "fave-tailwindcss-presets": "^0.1.0",
     "file-loader": "^6.0.0",
     "fs-extra": "^7.0.0",
-    "husky": "^4.0.10",
+    "husky": "^7.0.4",
     "jest": "^27.5.0",
     "lint-staged": "^10.0.1",
     "phosphor-react": "^1.4.0",
