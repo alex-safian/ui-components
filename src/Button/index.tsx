@@ -5,22 +5,22 @@ import 'antd/lib/button/style/index.css'
 import "./style.css"
 
 export type ButtonProps = AntButtonProps & {
-  icon?:React.ReactDOM;
+  iconPlacement ? : "start" | "end";
 };
 
-const Button: React.FC<ButtonProps> = (props:any) => {
-  const {icon,children, ...restProps} = props;
-  return <AntButton {...restProps} >
-    <span className={props.iconDirection === "left" ? "left" : (restProps.iconDirection !==null ? "right" : "" )}>
+const Button: React.FC<ButtonProps> = (props) => {
+  const {children, ...restProps} = props;
+  return <AntButton {...restProps}>
+    <span className={
+      props.iconPlacement === "start" ? "start" 
+      : (props.iconPlacement !=null ? "end" 
+      : (props.shape == "circle" ? "" : "default"))}>
       {children}
     </span>
-    {icon && <span>icon</span>}
   </AntButton>
 };
 
 Button.propTypes = {
-  icon:undefined
 };
-
 
 export default Button;

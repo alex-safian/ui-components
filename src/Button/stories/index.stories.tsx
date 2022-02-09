@@ -15,7 +15,7 @@ export const Primary = Template.bind({});
 
 Primary.args = {
 	label: 'Button',
-  children:"Button",
+  children:"BUTTON",
   type:"primary",
   size:"large",
 };
@@ -24,8 +24,8 @@ export const PrimaryIconLeft = Template.bind({});
 
 PrimaryIconLeft.args = {
 	label: 'Button',
-  iconDirection:"left",
-  children:<><CaretRight size={24} className="icon"/> Button</>,
+  iconPlacement:"start",
+  children:<><CaretRight size={24} className="iconLeft"/> BUTTON</>,
   type:"primary",
   size:"large",
 };
@@ -34,8 +34,8 @@ export const PrimaryIconRight = Template.bind({});
 
 PrimaryIconRight.args = {
 	label: 'Button',
-  iconDirection:"right",
-  children:<>Button <MagnifyingGlass size={24} className="icon"/></>,
+  iconPlacement:"end",
+  children:<>BUTTON <MagnifyingGlass size={24} className="iconRight"/></>,
   type:"primary",
   size:"large",
 };
@@ -44,7 +44,7 @@ export const Text = Template.bind({});
 
 Text.args = {
 	label: 'Button',
-  children:"Button",
+  children:"BUTTON",
   type:"text",
   size:"large",
 };
@@ -53,8 +53,9 @@ export const TextIconLeft = Template.bind({});
 
 TextIconLeft.args = {
 	label: 'Button',
-  iconDirection:"left",
-  children:<><CaretRight size={24} className="icon"/> Button</>,
+  type:"text",
+  iconPlacement:"start",
+  children:<><CaretRight size={24} className="iconLeft"/> BUTTON</>,
   size:"large",
 };
 
@@ -62,8 +63,9 @@ export const TextIconRight = Template.bind({});
 
 TextIconRight.args = {
 	label: 'Button',
-  iconDirection:"right",
-  children:<>Button <MagnifyingGlass size={24} className="icon"/></>,
+  type:"text",
+  iconPlacement:"end",
+  children:<>BUTTON <MagnifyingGlass size={24} className="iconRight"/></>,
   size:"large",
 };
 
